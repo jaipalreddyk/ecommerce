@@ -16,5 +16,10 @@ pipeline {
         bat 'C:\\apache-maven-3.6.1\\bin\\mvn test'
       }
     }
+    stage('sonarqube') {
+      steps {
+        bat 'mvn sonar:sonar'
+      }
+    }
   }
 }
